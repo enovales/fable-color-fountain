@@ -1,0 +1,9 @@
+{
+    "projFile": "canvas/canvas.fsx",
+    "outDir": "bin",
+    "watch": true,
+    "sourceMaps": true,
+    "scripts": {
+        "postbuild-once": "node node_modules/webpack-dev-server/bin/webpack-dev-server --watch"
+    }
+}
