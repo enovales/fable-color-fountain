@@ -1,6 +1,6 @@
-# Fable Browser App
+# Fable Browser App - Particle Fountain on Canvas
 
-This is a simple Fable app which draws a grid into a canvas element. 
+This is a simple Fable app which draws a particle fountain into a canvas element. 
 
 ## Requirements
 
