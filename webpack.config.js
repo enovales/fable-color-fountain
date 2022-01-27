@@ -12,7 +12,13 @@ module.exports = {
         filename: "bundle.js",
     },
     devServer: {
-        contentBase: "./public",
+        static: {
+            directory: path.resolve(__dirname, "public"),
+            staticOptions: {},
+            publicPath: "/",
+            serveIndex: true,
+            watch: true
+        },
         port: 8080,
     }
 }
