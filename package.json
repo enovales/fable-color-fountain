@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "start": "node node_modules/fable-compiler"
+    "postinstall": "dotnet tool restore",
+    "start": "dotnet fable watch src --run webpack serve"
   },
   "dependencies": {
-    "fable-compiler": "^2.13.0",
-    "fable-core": "^0.7.26",
-    "webpack": "^5.67.0",
-    "webpack-dev-server": "^4.7.3"
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }
