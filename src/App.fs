@@ -1,12 +1,12 @@
+module App
+
 #r "../node_modules/fable-core/Fable.Core.dll"
 
 open Fable.Core
-open Fable.Import
-open Fable.Import.Browser
+open Fable.Core.JsInterop
+open Browser
 
-let canvas =  document.getElementsByTagName_canvas().[0]
-canvas.width <- 1000.
-canvas.height <- 800.
+let canvas: Browser.Types.HTMLCanvasElement = unbox(document.getElementById("canvas"))
 let ctx = canvas.getContext_2d()
 
 (*
@@ -194,7 +194,8 @@ let rec loop (t) () =
     particles
     |> Array.iter drawParticle
 
-    window.setTimeout(loop (t + timestep), waitFor) |> ignore
+    let nextT = t + timestep
+    window.setTimeout(loop nextT, int(waitFor))|> ignore
 
 // start the loop
-loop(0.)() 
+loop(0.)()
