@@ -5,8 +5,10 @@
     "start": "dotnet fable watch src --run webpack serve"
   },
   "dependencies": {
-    "webpack": "^5.10.3",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.103.0"
   }
 }
